@@ -1,4 +1,3 @@
-import { useState } from "react";
 import css from "./VoteOptions.module.css";
 import type VoteType from "../../types/votes";
 
