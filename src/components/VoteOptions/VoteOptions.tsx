@@ -1,15 +1,15 @@
 import css from "./VoteOptions.module.css";
-import type VoteType from "../../types/votes";
+import type { VoteType } from "../../types/votes";
 
 interface VoteOptionsProps {
-  onVote: (type: keyof VoteType) => void;
-  reset: () => void;
+  onVote: (type: VoteType) => void;
+  onReset: () => void;
   canReset: boolean;
 }
 
 export default function VoteOptions({
   onVote,
-  reset,
+  onReset,
   canReset,
 }: VoteOptionsProps) {
   return (
@@ -42,7 +42,7 @@ export default function VoteOptions({
         <button
           className={`${css.button} ${css.reset}`}
           onClick={() => {
-            reset();
+            onReset();
           }}
         >
           Reset
